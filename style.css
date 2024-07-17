@@ -60,6 +60,11 @@ li a:hover {
   width: 15px;
 }
 
+#fireworks-button{
+  z-index: 99999;
+  cursor: pointer;
+}
+
 .profile-pic {
   margin-top: 6px;
   border-radius: 50%;
@@ -166,10 +171,11 @@ p {
 }
 
 #particles-js {
-    display: none;
+    /* display: none; */
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index:-1
 }
 
 #hello{
@@ -183,7 +189,7 @@ p {
   text-align: center;
 position: absolute;
 top:43%;
-left:35%;
+left:33%;
   padding: 20px;
   display: none;
   border-radius: 15px;

@@ -37,6 +37,7 @@
 
   <section class="search-wrapper">
     <img class="logo" id="fireworks-button" src="images/logo.png" alt="logo">
+
     <form>
       <img class="search" src="images/search.png">
       <img class="mic" src="images/mic.png">
@@ -70,12 +71,112 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="particles-config.js"></script>
+  <!-- <script src="particles-config.js"></script> -->
   <script type="text/javascript">
     document.getElementById('fireworks-button').addEventListener('click', function () {
-      const particlesContainer = document.getElementById('particles-js');
-      particlesContainer.style.display = 'block';
-      window.resizeTo(800, 600);
+      // const particlesContainer = document.getElementById('particles-js');
+      // particlesContainer.style.display = 'block';
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 2000,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": ["#ff0000", "#ff6600", "#ffff00", "#00ff00", "#0000ff", "#6600ff"]
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 1,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 1,
+              "opacity_min": 0,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 4,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 10,
+              "size_min": 0,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": false
+          },
+          "move": {
+            "enable": true,
+            "speed": 10,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      })
       const coolText = document.getElementsByClassName('cool-text')[0];
       coolText.style.display = 'block';
     });
